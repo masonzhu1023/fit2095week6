@@ -7,6 +7,8 @@ const doctors=require("./models/doctors");
 const patient=require("./models/patient");
 const path=require("path");
 let viewsPath = __dirname + "/views/";
+var util= require('util');
+var encoder = new util.TextEncoder('utf-8');
 
 
 
@@ -137,7 +139,7 @@ mongoose.connect(url,function(err){
 //extra task
 app.get("/listdoctor1",function(req,res){
    doctors.find({numberPatients:{$lte:5}},function(err,doctors){
-    res.render('/listpatient',{patient:patient});
+    res.render('/listdoctor1',{patient:patient});
     });
 })
 
