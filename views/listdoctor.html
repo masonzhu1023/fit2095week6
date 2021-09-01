@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Doctor List</h1>
+       
+      </div>
+    <table id="t01">
+        <tr>
+            <th>Fullname</th>
+            <th>Lastname</th>
+            <th>State</th>
+            <th>Suburb</th>
+            <th>Street</th>
+            <th>Unit</th>
+            <th>Number of patient</th>
+
+        </tr>
+        <% for(let i=0;i<doctors.length;i++){ %>
+        <tr>
+            <td><%= Doctors[i].Fullname %></td>
+            <td><%= Doctors[i].Lastname %></td>
+            <td><%= Doctors[i].state %></td>
+            <td><%= Doctors[i].Suburb %></td>
+            <td><%= Doctors[i].Street %></td>
+            <td><%= Doctors[i].Unit %></td>
+            <td><%= Doctors[i].Number of patient %></td>
+        </tr>
+        <%} %>
+    </table>
+</body>
+Click <a href="/"> HERE</a> to return to home page!!
+</html>
